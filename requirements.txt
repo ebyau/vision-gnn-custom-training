@@ -1,0 +1,4 @@
+timm==1.03
+torch==2.0.1
+matplotlib==3.8.0
+tqdm==4.66.1
