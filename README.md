@@ -1,6 +1,6 @@
 # Vision GNN Training
 
-This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272) model using a custom dataset. 
+This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272) model on a custom dataset. 
 
 ## Project Structure
 
