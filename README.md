@@ -1,8 +1,8 @@
 # Vision GNN Training
 
-This project finetunes the ViG (Vision GNN) model from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272)  on a custom dataset. 
+This project finetunes the ViG (Vision GNN) model from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272?target=_blank)  on a custom dataset. 
 This repo builds on top of the original implementation of Vision GNN from the authors of the paper Vision GNN: An Image is Worth Graph of Nodes.
-The official repo can be found [HERE](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch)
+The official repo can be found [HERE](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch?target=_blank)
 
 ## Project Structure
 
@@ -38,19 +38,19 @@ cd vision-gnn-custom-training
 
 2. Prepare your dataset:
 Organize your dataset into train and val directories within path_to_your_custom_dataset/.
-Each class should have its own subdirectory containing the respective images.
-Alternatively, you could run the `split_dataset.py` script to split you dataset into train and validation subsets.
+Each class should have its subdirectory containing the respective images.
+Alternatively, you could run the `split_dataset.py` script to split your dataset into train and validation subsets.
 
-3. Place the pre-trained weights file (pretrained_weights.pth) in the `ViG Checkpoint`. The [official Vision GNN repo](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch)  contains the pretrained weights for various models.
+3. Place the pre-trained weights file (pretrained_weights.pth) in the `ViG Checkpoint`. The [official Vision GNN repo](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch?target=_blank)  contains the pre-trained weights for various models.
 
 
 ## Training
-Before training, ensure you update the `data_dir` and `pretrained_model_path` variables to point to the correct path for dataset ab=nd pretrained model weights.
+Before training, ensure you update the `data_dir` and `pretrained_model_path` variables to point to the correct path for dataset and pretrained model weights.
 ```
 python mytrain.py
 ```
 
 ## Results
 
-After training, the best model is saved to best_model.pth. Plot of accuracy and loss is made for training and validation subset.
+After training, the best model is saved to best_model.pth. Plot of accuracy and loss is made for the training and validation subset.
 
