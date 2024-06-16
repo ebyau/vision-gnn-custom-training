@@ -1,6 +1,8 @@
 # Vision GNN Training
 
-This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272) model using a custom dataset. 
+This project finetunes the ViG (Vision GNN) model from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272)  on a custom dataset. 
+This repo builds on top of the original implementation of Vision GNN from the authors of the paper Vision GNN: An Image is Worth Graph of Nodes.
+The official repo can be found [HERE](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch)
 
 ## Project Structure
 
