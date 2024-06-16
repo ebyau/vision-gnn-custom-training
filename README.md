@@ -1,6 +1,6 @@
 # Vision GNN Training
 
-This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272) model on a custom dataset. 
+This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272) model using a custom dataset. 
 
 ## Project Structure
 
@@ -8,7 +8,7 @@ This project finetunes the ViG (Vision GNN) from the paper [Vision GNN: An Image
 - `gcn_lib`: Contains the implementation of the GCN layers and related utilities.
 - `vig.py`: Implementation of Vig model.
 - `mytrain.py`: Script to train the model.
-- `requirements.txt`: Libraries needed for the projects.
+- `requirements.txt`: requirements file.
 - `ViG Checkpoint`: Folder containing checkpoints for ViG and ViG pyramid models.
 - `pyramid_vig.py`: Implementation for Vig Pyramid models
 - `malaria_dataset/`: Directory containing your dataset, each class in its folder.
