@@ -20,7 +20,7 @@ def get_data_loaders(train_dir, val_dir, batch_size=8):
         transforms.RandomResizedCrop(224),
         #transforms.RandomHorizontalFlip(),
         transforms.RandomVerticalFlip(),
-        transforms.RandomRotation(10),
+        #transforms.RandomRotation(10),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
