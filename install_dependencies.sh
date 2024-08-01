@@ -13,7 +13,7 @@ pip install -r requirements.txt
 # download the checkpoints and move to model checkpoints folder
 wget https://github.com/huawei-noah/Efficient-AI-Backbones/releases/download/vig/vig_b_82.6.pth
 
-mv vig_b_82.6.pth model_checkpoints
+mv vig_b_82.6.pth checkpoints
 
 
 
