@@ -25,19 +25,15 @@ Install Dependencies
 bash install_dependencies.sh
 ```
 
-2. Prepare your dataset:
-Organize your dataset into train and val directories
-Each class should have its subdirectory containing the respective images.
-Alternatively, you could run the `split_dataset.py` script to split your dataset into train and validation subsets.
+
 
 
 ## Training
 Before training, ensure you update the `data_dir` and `pretrained_model_path` variables to point to the correct path for dataset and pretrained model weights.
 ```
-python mytrain.py
+python train.py --train_data /path/to/train-data --val_data /path/to/val_data --model [vig_ti_224_gelu, vig_s_224_gelu, vig_b_224_gelu] --model_ckpt /path/to/checkpoint_file
 ```
 
 ## Results
-
-After training, the best model is saved to best_model.pth. Plot of accuracy and loss is made for the training and validation subset.
+Results are automatically logged unto wandb
 
