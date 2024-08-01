@@ -16,14 +16,19 @@ conda deactivate # exit from base env
 conda create -n gnn python=3.10
 conda activate gnn
 ```
-C
+Clone Repo
+```
+git clone https://github.com/ebyau/vision-gnn-custom-training.git
+```
+Install Dependencies
+```
+bash install_dependencies.sh
+```
 
 2. Prepare your dataset:
-Organize your dataset into train and val directories within path_to_your_custom_dataset/.
+Organize your dataset into train and val directories
 Each class should have its subdirectory containing the respective images.
 Alternatively, you could run the `split_dataset.py` script to split your dataset into train and validation subsets.
-
-3. Place the pre-trained weights file (pretrained_weights.pth) in the `ViG Checkpoint`. The [official Vision GNN repo](https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch)  contains the pre-trained weights for various models.
 
 
 ## Training
