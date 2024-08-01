@@ -42,5 +42,4 @@ def get_data_loaders(train_dir, val_dir, batch_size=8):
     
     return train_loader, val_loader
 
-# Example usage
-#train_loader, val_loader = get_data_loaders('train', 'val', batch_size=8)
+
