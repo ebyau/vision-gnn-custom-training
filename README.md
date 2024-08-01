@@ -6,17 +6,6 @@ The official repo can be found <a href="https://github.com/huawei-noah/Efficient
 
 ## Project Structure
 
-- `mydataset.py`: Contains the dataloader implementation for loading the custom dataset.
-- `gcn_lib`: Contains the implementation of the GCN layers and related utilities.
-- `vig.py`: Implementation of Vig model.
-- `mytrain.py`: Script to train the model.
-- `requirements.txt`: requirements file.
-- `ViG Checkpoint`: Folder containing checkpoints for ViG and ViG pyramid models.
-- `pyramid_vig.py`: Implementation for Vig Pyramid models
-- `malaria_dataset/`: Directory containing your dataset, each class in its folder.
-- `split_datatset`: Script to split dataset into train and validation subsets
-
-`
 
 
 
