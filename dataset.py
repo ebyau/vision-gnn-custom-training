@@ -10,20 +10,37 @@
 
 
 import os
-from torchvision import datasets, transforms
+from torchvision import transforms, datasets
 from torch.utils.data import DataLoader
 
-def get_dataloader(data_dir, batch_size=16, img_size=224):
-    transform = transforms.Compose([
-        transforms.Resize((img_size, img_size)),
+def get_data_loaders(train_dir, val_dir, batch_size=8):
+    # Define the image preprocessing and augmentation pipeline for training
+    train_preprocess = transforms.Compose([
+        transforms.Resize(256),
+        transforms.RandomResizedCrop(224),
+        #transforms.RandomHorizontalFlip(),
+        transforms.RandomVerticalFlip(),
+        transforms.RandomRotation(10),
         transforms.ToTensor(),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
-    
-    train_dataset = datasets.ImageFolder(os.path.join(data_dir, 'train'), transform=transform)
-    val_dataset = datasets.ImageFolder(os.path.join(data_dir, 'val'), transform=transform)
-    
+
+    # Define the image preprocessing pipeline for validation
+    val_preprocess = transforms.Compose([
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
+
+    # Load the custom dataset with the respective transformations
+    train_dataset = datasets.ImageFolder(root=train_dir, transform=train_preprocess)
+    val_dataset = datasets.ImageFolder(root=val_dir, transform=val_preprocess)
+
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
     
     return train_loader, val_loader
+
+# Example usage
+#train_loader, val_loader = get_data_loaders('train', 'val', batch_size=8)
