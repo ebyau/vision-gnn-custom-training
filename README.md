@@ -1,20 +1,22 @@
 # Vision GNN Training
 
-This project finetunes the ViG (Vision GNN) model from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272)  on a custom dataset. 
-This repo builds on top of the original implementation of Vision GNN from the authors of the paper Vision GNN: An Image is Worth Graph of Nodes.
+This project finetunes the ViG (Vision GNN) model from the paper [Vision GNN: An Image is Worth Graph of Nodes](https://arxiv.org/abs/2206.00272)  on a custom dataset.   
 The official repo can be found <a href="https://github.com/huawei-noah/Efficient-AI-Backbones/tree/master/vig_pytorch" target="_blank">HERE</a>.
-
-## Project Structure
-
-
 
 
 ## Setup
-1. Clone Repository
+1. Setup Environment
 ```
-git clone https://github.com/ebyau/vision-gnn-custom-training.git
-cd vision-gnn-custom-training
+# download and Install MiniConda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 ```
+```
+conda deactivate # exit from base env
+conda create -n gnn python=3.10
+conda activate gnn
+```
+C
 
 2. Prepare your dataset:
 Organize your dataset into train and val directories within path_to_your_custom_dataset/.
