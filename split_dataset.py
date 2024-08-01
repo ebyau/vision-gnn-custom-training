@@ -29,9 +29,11 @@ Examples:
     split_dataset('path/to/data', 'path/to/output', val_ratio=0.2)
 """
 
+
 import os
-import shutil
 import random
+import shutil
+import argparse
 
 def split_dataset(data_dir, output_dir, val_ratio=0.2):
     """
@@ -80,9 +82,12 @@ def split_dataset(data_dir, output_dir, val_ratio=0.2):
         print(f"Class {cls}: {len(train_images)} images for training, {len(val_images)} images for validation")
 
 if __name__ == "__main__":
-    # Define the data directory and output directory
-    data_dir = 'D:/Summer 2024/Vision GNN/malaria_dataset'  
-    output_dir = 'D:/Summer 2024/Vision GNN/malaria_dataset' 
+    parser = argparse.ArgumentParser(description="Split dataset into training and validation sets.")
+    parser.add_argument('data_dir', type=str, help="Path to the dataset directory containing class subdirectories.")
+    parser.add_argument('output_dir', type=str, help="Path to the output directory where the split dataset will be saved.")
+    parser.add_argument('--val_ratio', type=float, default=0.2, help="Ratio of validation set size to the total dataset size (default is 0.2).")
+    
+    args = parser.parse_args()
     
     # Split the dataset
-    split_dataset(data_dir, output_dir)
+    split_dataset(args.data_dir, args.output_dir, args.val_ratio)
