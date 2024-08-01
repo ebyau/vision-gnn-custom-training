@@ -145,7 +145,7 @@ def train_and_validate(model, train_loader, val_loader, config):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Train a Vision Transformer model.")
+    parser = argparse.ArgumentParser(description="Train a Vision GNN model.")
     parser.add_argument('--train_data', type=str, required=True, help='Path to the training dataset')
     parser.add_argument('--val_data', type=str, required=True, help='Path to the validation dataset')
     parser.add_argument('--model', type=str, required=True, choices=['vig_ti_224_gelu', 'vig_s_224_gelu', 'vig_b_224_gelu'], help='Model type to use')
