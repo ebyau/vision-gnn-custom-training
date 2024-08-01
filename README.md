@@ -16,18 +16,9 @@ The official repo can be found <a href="https://github.com/huawei-noah/Efficient
 - `malaria_dataset/`: Directory containing your dataset, each class in its folder.
 - `split_datatset`: Script to split dataset into train and validation subsets
 
-## Requirements
-- `torchvision`
-- `timm`
-- `tqdm`
-- `python 3.10 or higher`
+`
 
-You can install the required packages using:
 
-```bash
-pip install torch torchvision timm tqdm
-
-```
 
 ## Setup
 1. Clone Repository
