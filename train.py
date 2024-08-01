@@ -43,10 +43,9 @@ import torch.optim as optim
 from vig import vig_ti_224_gelu, vig_s_224_gelu, vig_b_224_gelu
 from mydataset import get_dataloader
 from tqdm.auto import tqdm
-from torchmetrics import Accuracy
 import matplotlib.pyplot as plt
 import wandb
-from dataset import get_data_loader
+from load_dataset import get_data_loaders
 import argparse
 
 
@@ -192,7 +191,7 @@ def main():
     )
 
     # Assume train_loader and val_loader are defined elsewhere
-    train_loader, val_loader = get_dataloader(args.train_data, args.val_data, config.batch_size)
+    train_loader, val_loader = get_dataloaders(args.train_data, args.val_data, config.batch_size)
 
     # Train and validate the model
     train_and_validate(model, train_loader, val_loader, config)
