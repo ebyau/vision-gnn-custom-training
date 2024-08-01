@@ -18,30 +18,12 @@ Module Description:
     - Load pretrained weights into the model.
     - Train the model and track training and validation metrics.
     - Save the best performing model based on validation loss.
-
-Functions:
-    load_pretrained_weights(model, pretrained_model_path, device)
-        Loads pretrained weights into the model from a specified path.
-
-    train_model(model, train_loader, val_loader, num_epochs, lr, save_path)
-        Trains the model using the training and validation data loaders.
-
-Usage:
-    From the command line, set the data directory and pretrained model path, and run the script:
-    python this_script.py
-
-Examples:
-    train_loader, val_loader = get_dataloader(data_dir)
-    model = vig_b_224_gelu()
-    model = load_pretrained_weights(model, pretrained_model_path)
-    train_model(model, train_loader, val_loader, num_epochs=10, save_path='best_model.pth')
 """
 import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from vig import vig_ti_224_gelu, vig_s_224_gelu, vig_b_224_gelu
-from mydataset import get_dataloader
 from tqdm.auto import tqdm
 import matplotlib.pyplot as plt
 import wandb
